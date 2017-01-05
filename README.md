@@ -17,3 +17,5 @@ The Path to PowerBI Desktop executable.
 $waitoPBD  = 10                                                                            
 The Time Needed in Seconds for PowerBI Desktop to                                                                                           launch and open the pbix file, 10 second by                                                                                                 default, you may increase it for big file  
 
+although the local SSAS is refreshed with the latest data, the changes are not saved in the PBIX file, and the reports show the old data, which give the impression that the refresh did not work, if you want to save the changes, you need to click save on the PowerBI Desktop  
+Please there is no garanty whatever, always make a copy of your pbix before doing anything  
