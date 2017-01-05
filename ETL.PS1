@@ -12,7 +12,7 @@ Start-Sleep -s $waitoPBD
 
 # get the server name and the port name of PowerBI desktop SSAS , thanks for Imke http://www.thebiccountant.com/2016/04/09/hackpowerbi/#more-1147
 
-$pathtofile = (Get-ChildItem -Path c:\users -Filter msmdsrv.port.txt -Recurse -ErrorAction SilentlyContinue -Force).FullName
+$pathtofile = (Get-ChildItem -Path c:\users -Filter msmdsrv.port.txt -Recurse -ErrorAction SilentlyContinue -Force | sort LastWriteTime | select -last 1).FullName
 $port = gc $pathtofile
 $port = $port -replace '\D',''
 $dataSource = "localhost:$port"
